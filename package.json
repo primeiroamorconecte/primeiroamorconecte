@@ -1,7 +1,8 @@
 {
-  "name": "primeiro-amor-conecte",
-  "version": "1.0.0",
+  "name": "primeiro-amor-conecte-pro",
+  "version": "2.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -9,6 +10,7 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.4",
+    "qrcode": "^1.5.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

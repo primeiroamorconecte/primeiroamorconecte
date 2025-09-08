@@ -1,29 +1,29 @@
-# Primeiro Amor Conecte — App Web
+# Primeiro Amor Conecte — PRO (Branding + Membros/Voluntários/Cursos + PIX QR)
 
-Aplicativo web oficial da **Igreja Cristã Primeiro Amor**, feito em **React + Vite + Tailwind + Supabase**.
+## 1) Supabase
+Execute em **SQL Editor**:
+- `supabase/schema.sql`
+- `supabase/policies.sql`
 
-## 🚀 Rodar localmente
-```bash
-npm install
-npm run dev
-```
-
-## 🛠️ Build para produção
-```bash
-npm run build
-```
-Os arquivos finais ficam em `dist/`.
-
-## 🌐 Deploy no Netlify
-- Build command: `npm run build`
-- Publish directory: `dist`
-
-### Variáveis de ambiente
+## 2) Variáveis (Netlify → Site settings → Environment Variables)
 - `VITE_SUPABASE_URL`
 - `VITE_SUPABASE_ANON_KEY`
-- `VITE_ADMIN_EMAILS` (e-mails separados por vírgula)
+- `VITE_ADMIN_EMAILS` (ex.: `pastor@igreja.com,admin@igreja.com`)
 
-## 🔑 Autenticação
-Login via Supabase Auth (e-mail/senha). Usuários listados em `VITE_ADMIN_EMAILS` têm acesso ao painel administrativo.
+## 3) Deploy
+- Import from Git → Build: `npm run build` → Publish: `dist`
 
----
+## 4) Domínio personalizado
+No Netlify: **Domain settings → Add custom domain** (ex.: `app.primeiroamor.com.br`).
+Aponte o **CNAME** para o subdomínio Netlify gerado. Se o domínio for .com.br e gerenciado no Registro.br, crie o CNAME lá.
+
+## 5) PIX
+Na aba **Configurações** do painel admin:
+- Salve a **Chave PIX**.
+- Use **Gerar QR (texto)** para criar um QR simples (baseado no texto da chave). Para QR **EMV-Pix oficial** (com valor/descrição), personalize comigo.
+
+## 6) Páginas extras
+Incluídas: **Membros**, **Voluntários**, **Cursos** — com CRUD no painel.
+
+## Dica de segurança
+Crie perfis admin no Supabase e, se desejar, troque as policies para só admins (via tabela profiles) poderem escrever.
