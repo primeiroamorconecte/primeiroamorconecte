@@ -1,8 +1,11 @@
 {
-  "name": "primeiro-amor-conecte-pro",
-  "version": "2.0.0",
+  "name": "primeiro-amor-conecte",
+  "version": "2.1.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
