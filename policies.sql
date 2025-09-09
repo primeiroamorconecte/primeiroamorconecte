@@ -1,1 +1,1 @@
--- policies.sql (igual ao anterior)
+-- SQL de políticas de segurança do Supabase (RLS)
